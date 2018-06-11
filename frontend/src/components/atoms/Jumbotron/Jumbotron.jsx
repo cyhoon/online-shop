@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Jumbotron = ({ backgroundColor, height, title, subTitle }) => {
+const Jumbotron = ({ title, subTitle, height, backgroundColor, }) => {
     const Container = styled.div`
         width: 100%;
         height: ${height}
@@ -9,6 +9,7 @@ const Jumbotron = ({ backgroundColor, height, title, subTitle }) => {
 
         display: flex;
         justify-content: center;
+        align-items: center;
     `;
 
     const Title = styled.span`

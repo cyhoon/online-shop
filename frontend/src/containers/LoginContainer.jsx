@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import LoginMain from '../components/organisms/LoginMain';
 
 class LoginContainer extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class LoginContainer extends Component {
     render() {
         return (
             <div>
-                LoginContainer
+                <LoginMain />
             </div>
         );
     }
