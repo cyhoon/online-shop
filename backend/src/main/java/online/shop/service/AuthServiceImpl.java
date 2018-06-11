@@ -3,6 +3,7 @@ package online.shop.service;
 import online.shop.model.AuthRepository;
 import online.shop.model.User;
 import online.shop.response.GeneralFormat;
+import online.shop.response.auth.LoginFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,20 +16,21 @@ public class AuthServiceImpl implements AuthService {
     private AuthRepository authRepository;
 
     @Override
-    public GeneralFormat login(User user) {
-        GeneralFormat generalFormat = new GeneralFormat();
+    public LoginFormat login(User user) {
+        LoginFormat loginFormat = new LoginFormat();
 
-        Optional<User> raw = authRepository.findById(user.getId());
+        User raw = authRepository.findByAccount(user.getId(), user.getPw());
 
-        if (!raw.isPresent()) { // 로그인 실패
-            generalFormat.setCode(10);
-            generalFormat.setDescription("로그인 실패");
+        if (raw == null) { // 로그인 실패
+            loginFormat.setCode(10);
+            loginFormat.setDescription("로그인 실패");
         } else {
-            generalFormat.setCode(0);
-            generalFormat.setDescription("로그인 성공");
+            loginFormat.setCode(0);
+            loginFormat.setDescription("로그인 성공");
+            loginFormat.setUser(raw);
         }
 
-        return generalFormat;
+        return loginFormat;
     }
 
     @Override
