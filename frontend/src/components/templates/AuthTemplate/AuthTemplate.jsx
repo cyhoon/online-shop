@@ -23,16 +23,22 @@ const AuthTemplate = ({ url, LoginContainer, RegisterContainer }) => {
         margin: 0 auto;
     `;
 
+    const LoginWrapper = styled.div`
+        width: 800px;
+        height: 280px;
+        margin: 0 auto;
+        margin-top: 10%;
+        background-color: #eee;
+        position: relative;
+    `;
+
     switch (url) {
     case '/login':
         return (
             <Container>
-                <HeaderContainer>
-                    <Header />
-                </HeaderContainer>
-                <FooterContainer>
-                    <Footer />
-                </FooterContainer>
+                <LoginWrapper>
+                    { LoginContainer }
+                </LoginWrapper>
             </Container>
         );
     case '/register':

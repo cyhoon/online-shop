@@ -24,7 +24,7 @@ const Footer = () => {
     `;
 
     const LogoContainer = styled.div`
-        flex: 1;
+        flex: 1.1;
     `;
 
     const InformationContainer = styled.div`
