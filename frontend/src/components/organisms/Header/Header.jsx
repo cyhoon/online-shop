@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Nav from '../../molecules/Nav';
 import Search from '../../molecules/Search';
 import Type from '../../molecules/Type';
+import Logo from '../../atoms/Logo';
 
 const Header = () => {
     const Container = styled.div`
@@ -14,12 +15,6 @@ const Header = () => {
     const MiddleContainer = styled.div`
         display: flex;
         margin-bottom: 20px;
-    `;
-
-    const Logo = styled.span`
-        font-size: 32px;
-        font-weight: bold;
-        cursor: pointer;
     `;
 
     const TypeContainer = styled.div`

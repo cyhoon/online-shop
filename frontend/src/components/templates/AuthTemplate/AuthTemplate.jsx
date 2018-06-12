@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Jumbotron from '../../atoms/Jumbotron';
 import Header from '../../organisms/Header';
+import Footer from '../../organisms/Footer';
 
 const AuthTemplate = ({ url, LoginContainer, RegisterContainer }) => {
     const Container = styled.div`
@@ -10,6 +11,11 @@ const AuthTemplate = ({ url, LoginContainer, RegisterContainer }) => {
 
     const HeaderContainer = styled.div`
         margin-bottom: 30px;
+    `;
+
+    const FooterContainer = styled.div`
+        // border-top: 1px solid #999;
+        // border-bottom: 1px solid #999;
     `;
 
     const RegisterWrapper = styled.div`
@@ -24,6 +30,9 @@ const AuthTemplate = ({ url, LoginContainer, RegisterContainer }) => {
                 <HeaderContainer>
                     <Header />
                 </HeaderContainer>
+                <FooterContainer>
+                    <Footer />
+                </FooterContainer>
             </Container>
         );
     case '/register':
@@ -40,6 +49,9 @@ const AuthTemplate = ({ url, LoginContainer, RegisterContainer }) => {
                 <RegisterWrapper>
                     {RegisterContainer}
                 </RegisterWrapper>
+                <FooterContainer>
+                    <Footer />
+                </FooterContainer>
             </Container>
         );
     default:

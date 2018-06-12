@@ -49,7 +49,7 @@ const RegisterForm = () => {
             <InputBlock width="50%" name="주소 : " />
             <InputBlock name="이메일 주소 : " />
             <Terms name="회원약관" />
-            <div style={{ width: '260px', margin: '0 auto', marginTop: '20px', marginBottom: '50px' }}>
+            <div style={{ width: '260px', margin: '0 auto', marginTop: '40px', marginBottom: '50px' }}>
                 <Button 
                     width="120px"
                     backgroundColor="#eee"
