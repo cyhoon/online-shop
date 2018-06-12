@@ -11,8 +11,6 @@ const BargainBlock = () => {
         font-weight: bold;
         font-size: 17px;
         text-align: center;
-        // padding-top: 10px;
-        // padding-bottom: 10px;
         border: 1px solid black;
     `;
 
