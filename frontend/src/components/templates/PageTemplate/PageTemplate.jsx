@@ -1,9 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PageTemplate = ({ header, visualMain }) => {
+const PageTemplate = ({ header, visualMain, ProductStack }) => {
     const VisualMainContainer = styled.div`
-        margin-top: 40px;
+        margin-top: 20px;
+    `;
+
+    const MainContainer = styled.div`
+        display: flex;
+        width: 100%;
+    `;
+
+    const LeftContainer = styled.div`
+        width: 20%;
+    `;
+
+    const MiddleContainer = styled.div`
+        width: 60%
+    `;
+
+    const RightContainer = styled.div`
+        width: 20%;
     `;
 
     return (
@@ -12,6 +29,17 @@ const PageTemplate = ({ header, visualMain }) => {
             <VisualMainContainer>
                 {visualMain}
             </VisualMainContainer>
+            <MainContainer>
+                <LeftContainer>
+                    {ProductStack}
+                </LeftContainer>
+                <MiddleContainer>
+                    middle container
+                </MiddleContainer>
+                <RightContainer>
+                    right container
+                </RightContainer>
+            </MainContainer>
         </div>
     );
 };

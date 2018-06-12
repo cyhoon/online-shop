@@ -23,11 +23,11 @@ const News = () => {
         <Container>
             <Title>Shopping New & Event</Title>
             <ul>
-                <li>옷을 판다네</li>
-                <li>옷을 판다네</li>
-                <li>옷을 판다네</li>
-                <li>옷을 판다네</li>
-                <li>옷을 판다네</li>
+                <li>옷 판매합니다</li>
+                <li>옷 판매합니다</li>
+                <li>옷 판매합니다</li>
+                <li>옷 판매합니다</li>
+                <li>옷 판매합니다</li>
             </ul>
         </Container>
     );

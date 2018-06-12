@@ -4,24 +4,36 @@ import News from '../../molecules/News';
 import styled from 'styled-components';
 
 const VisualMain = () => {
+    const Container = styled.div`
+        display: flex;
+        position: relative;
+    `;
+
+    const JumbotronContainer = styled.div`
+        flex: 3;
+    `;
+
     const NewsContainer = styled.div`
+        flex: 0.1;
         position: absolute;
-        top: 12%;
-        right: 18.7%;
+        top: 25px;
+        right: 358px;
     `;
 
     return (
-        <div style={{ position: 'relative' }}>
-            <Jumbotron 
-                title="Main Visual"
-                subTitle="및 이벤트공지 뉴스"
-                height="250px"
-                backgroundColor="#eee"
-            />
+        <Container>
+            <JumbotronContainer>
+                <Jumbotron
+                    title="Main Visual"
+                    subTitle="및 이벤트공지 뉴스"
+                    height="250px"
+                    backgroundColor="#eee"
+                />
+            </JumbotronContainer>
             <NewsContainer>
                 <News />
             </NewsContainer>
-        </div>
+        </Container>
     );
 };
 
