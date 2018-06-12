@@ -8,7 +8,7 @@ const Img = ({ imgSrc }) => {
         background-image: url(${imgSrc});
         background-repeat: no-repeat;
         background-size: cover;
-        // background-position: center;
+        background-position: center;
     `;
 
     return (

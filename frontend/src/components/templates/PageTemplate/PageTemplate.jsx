@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Advertise from '../../atoms/Advertise';
 import Footer from '../../organisms/Footer';
 import ProductMain from '../../organisms/ProductMain';
+import ProductMainSecond from '../../organisms/ProductMainSecond';
 
 const PageTemplate = ({ header, visualMain, ProductStack }) => {
     const VisualMainContainer = styled.div`
@@ -44,6 +45,7 @@ const PageTemplate = ({ header, visualMain, ProductStack }) => {
                 </LeftContainer>
                 <MiddleContainer>
                     <ProductMain title="베스트 추천 상품"/>
+                    <ProductMainSecond title="추천상품" />
                     <ProductMain title="인기 상품"/>
                 </MiddleContainer>
                 <RightContainer>
