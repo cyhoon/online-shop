@@ -7,7 +7,7 @@ const Img = ({ imgSrc }) => {
         height: 100%;
         background-image: url(${imgSrc});
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         // background-position: center;
     `;
 

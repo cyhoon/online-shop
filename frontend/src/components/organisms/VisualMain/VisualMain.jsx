@@ -7,6 +7,9 @@ const VisualMain = () => {
     const Container = styled.div`
         display: flex;
         position: relative;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        // border-bottom: none;
     `;
 
     const JumbotronContainer = styled.div`
@@ -27,7 +30,7 @@ const VisualMain = () => {
                     title="Main Visual"
                     subTitle="및 이벤트공지 뉴스"
                     height="250px"
-                    backgroundColor="#eee"
+                    backgroundColor="white"
                 />
             </JumbotronContainer>
             <NewsContainer>

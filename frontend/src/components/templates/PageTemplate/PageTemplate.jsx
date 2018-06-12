@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import Advertise from '../../atoms/Advertise';
+import Footer from '../../organisms/Footer';
+import ProductMain from '../../organisms/ProductMain';
 
 const PageTemplate = ({ header, visualMain, ProductStack }) => {
     const VisualMainContainer = styled.div`
@@ -23,6 +26,8 @@ const PageTemplate = ({ header, visualMain, ProductStack }) => {
         width: 20%;
     `;
 
+    const FooterContainer = styled.div``;
+
     return (
         <div>
             {header}
@@ -32,14 +37,26 @@ const PageTemplate = ({ header, visualMain, ProductStack }) => {
             <MainContainer>
                 <LeftContainer>
                     {ProductStack}
+                    {ProductStack}
+                    {ProductStack}
+                    {ProductStack}
+                    {ProductStack}
                 </LeftContainer>
                 <MiddleContainer>
-                    middle container
+                    <ProductMain title="베스트 추천 상품"/>
+                    <ProductMain title="인기 상품"/>
                 </MiddleContainer>
                 <RightContainer>
-                    right container
+                    <Advertise />
+                    <Advertise />
+                    <Advertise />
+                    <Advertise />
+                    <Advertise />
                 </RightContainer>
             </MainContainer>
+            <FooterContainer>
+                <Footer />
+            </FooterContainer>
         </div>
     );
 };
