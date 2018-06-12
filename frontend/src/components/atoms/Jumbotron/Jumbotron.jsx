@@ -8,6 +8,7 @@ const Jumbotron = ({ title, subTitle, height, backgroundColor, }) => {
         background-color: ${backgroundColor}
 
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     `;
@@ -21,7 +22,7 @@ const Jumbotron = ({ title, subTitle, height, backgroundColor, }) => {
 
     const SubTitle = styled.span`
         display: block;
-        font-weight: bold;
+        font-weight: lighter;
         font-size: 21px;
         text-align: center;
     `;
