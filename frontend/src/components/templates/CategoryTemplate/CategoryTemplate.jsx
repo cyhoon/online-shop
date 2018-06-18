@@ -37,11 +37,6 @@ const CategoryTemplate = () => {
         border: 1px solid #eee;
     `;
 
-    const TitleContainer = styled.div`
-        width: 95%;
-        margin: 0 auto;
-    `;
-
     const ImageContainer = styled.div`
         background-image: url('https://cdn.crewbi.com/images/goods_img/20171208/272068/272068_a_500.jpg?v=201801251749');
         background-size: cover;
@@ -66,15 +61,12 @@ const CategoryTemplate = () => {
             <MainContainer>
                 <LeftContainer>
                     <SubMenuContainer>
-                        <SubMenu />
+                        <SubMenu title="가방" />
                     </SubMenuContainer>
                 </LeftContainer>
                 <MiddleContainer>
-                    {/* <TitleContainer> */}
-                        <Title text="가방" textAlign='left' paddingLeft="40px" />
-                    {/* </TitleContainer> */}
-                    <ImageContainer>
-                    </ImageContainer>
+                    <Title text="가방" textAlign='left' paddingLeft="40px" />
+                    <ImageContainer />
                     <ProductMainFour title="신상품코너"/>
                     <ProductMainFour title="MD 추천상품"/>
                     <ProductMainLine title="인기상품" />
