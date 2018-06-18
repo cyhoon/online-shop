@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styeld-components';
+import styled from 'styled-components';
 
-const Title = ({ text }) => {
+const Title = ({ text, textAlign, paddingLeft }) => {
     const DynamicTitle = styled.span`
         display: block;
         height: 50px;
@@ -9,12 +9,13 @@ const Title = ({ text }) => {
         background-color: #eee;
         font-weight: bold;
         font-size: 17px;
-        text-align: center;
+        text-align: ${textAlign};
+        padding-left: ${paddingLeft};
         border: 1px solid black;
     `;
 
     return (
-        <Title>{ text }</Title>
+        <DynamicTitle>{ text }</DynamicTitle>
     );
 };
 

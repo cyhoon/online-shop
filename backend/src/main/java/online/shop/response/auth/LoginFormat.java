@@ -1,6 +1,6 @@
 package online.shop.response.auth;
 
-import online.shop.model.User;
+import online.shop.model.database.User;
 import online.shop.response.GeneralFormat;
 
 public class LoginFormat extends GeneralFormat {

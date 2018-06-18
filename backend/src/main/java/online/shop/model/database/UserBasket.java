@@ -1,4 +1,4 @@
-package online.shop.model;
+package online.shop.model.database;
 
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -6,23 +6,20 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="purchase")
-public class Purchase {
+@Table(name="user_basket")
+public class UserBasket {
     @Id
-    @Column(name="idx", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idx;
 
-    @Column(length = 20)
+    @Column(nullable = false, length = 20)
     private String user_id;
 
-    private int user_address_idx;
     private int product_idx;
-    private int money;
 
     @Column(nullable = false, updatable = false)
     @CreationTimestamp
-    private Date purchase_date;
+    private Date create_date;
 
     public int getIdx() {
         return idx;
@@ -40,14 +37,6 @@ public class Purchase {
         this.user_id = user_id;
     }
 
-    public int getUser_address_idx() {
-        return user_address_idx;
-    }
-
-    public void setUser_address_idx(int user_address_idx) {
-        this.user_address_idx = user_address_idx;
-    }
-
     public int getProduct_idx() {
         return product_idx;
     }
@@ -56,19 +45,11 @@ public class Purchase {
         this.product_idx = product_idx;
     }
 
-    public int getMoney() {
-        return money;
+    public Date getCreate_date() {
+        return create_date;
     }
 
-    public void setMoney(int money) {
-        this.money = money;
-    }
-
-    public Date getPurchase_date() {
-        return purchase_date;
-    }
-
-    public void setPurchase_date(Date purchase_date) {
-        this.purchase_date = purchase_date;
+    public void setCreate_date(Date create_date) {
+        this.create_date = create_date;
     }
 }

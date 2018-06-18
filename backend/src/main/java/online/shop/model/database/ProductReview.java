@@ -1,4 +1,4 @@
-package online.shop.model;
+package online.shop.model.database;
 
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -6,32 +6,42 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="notice")
-public class Notice {
+@Table(name="product_review")
+public class ProductReview {
     @Id
-    @Column(name="idx", nullable = false)
+    @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idx;
+    private int idx;
 
-    @Column(name="user_id", nullable = false,  length = 20)
+    private int product_idx;
+
+    @Column(nullable = false, length = 20)
     private String user_id;
 
-    @Column(name="title", nullable = false, length = 45)
+    @Column(nullable = false, length = 45)
     private String title;
 
-    @Column(name="content", nullable = false, length = 255)
+    @Column(nullable = false, length = 255)
     private String content;
 
-    @Column(name="create_date", nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false)
     @CreationTimestamp
-    private Date create_date;
+    private Date write_date;
 
-    public long getIdx() {
+    public int getIdx() {
         return idx;
     }
 
-    public void setIdx(long idx) {
+    public void setIdx(int idx) {
         this.idx = idx;
+    }
+
+    public int getProduct_idx() {
+        return product_idx;
+    }
+
+    public void setProduct_idx(int product_idx) {
+        this.product_idx = product_idx;
     }
 
     public String getUser_id() {
@@ -58,11 +68,11 @@ public class Notice {
         this.content = content;
     }
 
-    public Date getCreate_date() {
-        return create_date;
+    public Date getWrite_date() {
+        return write_date;
     }
 
-    public void setCreate_date(Date create_date) {
-        this.create_date = create_date;
+    public void setWrite_date(Date write_date) {
+        this.write_date = write_date;
     }
 }

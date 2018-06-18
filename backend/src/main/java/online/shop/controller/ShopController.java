@@ -1,5 +1,7 @@
 package online.shop.controller;
 
+import online.shop.response.shop.ProductFormat;
+import online.shop.service.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,8 +26,11 @@ public class ShopController {
         - 제품 상세보기 /shop/product/:{idx}
      */
 
+    @Autowired
+    ShopService shopService;
+
     // 베스트 추천상품 조회
     @GetMapping("/shop/best/product")
-    public String getBestProduct() { return "test"; }
+    public ProductFormat getBestProduct() { return shopService.getBestProduct(); }
 
 }

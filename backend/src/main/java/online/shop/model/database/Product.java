@@ -1,4 +1,4 @@
-package online.shop.model;
+package online.shop.model.database;
 
 import org.hibernate.annotations.CreationTimestamp;
 

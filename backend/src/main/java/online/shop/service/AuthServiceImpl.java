@@ -1,13 +1,11 @@
 package online.shop.service;
 
-import online.shop.model.AuthRepository;
-import online.shop.model.User;
+import online.shop.model.repository.AuthRepository;
+import online.shop.model.database.User;
 import online.shop.response.GeneralFormat;
 import online.shop.response.auth.LoginFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class AuthServiceImpl implements AuthService {

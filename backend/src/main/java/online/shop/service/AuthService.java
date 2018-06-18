@@ -1,6 +1,6 @@
 package online.shop.service;
 
-import online.shop.model.User;
+import online.shop.model.database.User;
 import online.shop.response.GeneralFormat;
 import online.shop.response.auth.LoginFormat;
 

@@ -4,6 +4,11 @@ import styled from 'styled-components';
 import Header from '../../organisms/Header';
 import Footer from '../../organisms/Footer';
 
+import Title from '../../atoms/Title';
+import SubMenu from '../../molecules/SubMenu';
+import ProductMainFour from '../../organisms/ProductMainFour';
+import ProductMainLine from '../../organisms/ProductMainLine/ProductMainLine';
+
 const CategoryTemplate = () => {
     const Container = styled.div`
         width: 100%;
@@ -19,15 +24,38 @@ const CategoryTemplate = () => {
     `;
 
     const MainContainer = styled.div`
-
+        display: flex;
     `;
 
     const LeftContainer = styled.div`
-    
+        flex: 1;
+        border: 1px solid #eee;
     `;
 
     const MiddleContainer = styled.div`
-    
+        flex: 3;
+        border: 1px solid #eee;
+    `;
+
+    const TitleContainer = styled.div`
+        width: 95%;
+        margin: 0 auto;
+    `;
+
+    const ImageContainer = styled.div`
+        background-image: url('https://cdn.crewbi.com/images/goods_img/20171208/272068/272068_a_500.jpg?v=201801251749');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 100%;
+        height: 300px;
+    `;
+
+    const SubMenuContainer = styled.div`
+        width: 100%;
+        height: 350px;
+        border: 1px solid #eee;
     `;
 
     return (
@@ -37,10 +65,19 @@ const CategoryTemplate = () => {
             </HeaderContainer>
             <MainContainer>
                 <LeftContainer>
-                    left
+                    <SubMenuContainer>
+                        <SubMenu />
+                    </SubMenuContainer>
                 </LeftContainer>
                 <MiddleContainer>
-                    middle
+                    {/* <TitleContainer> */}
+                        <Title text="가방" textAlign='left' paddingLeft="40px" />
+                    {/* </TitleContainer> */}
+                    <ImageContainer>
+                    </ImageContainer>
+                    <ProductMainFour title="신상품코너"/>
+                    <ProductMainFour title="MD 추천상품"/>
+                    <ProductMainLine title="인기상품" />
                 </MiddleContainer>
             </MainContainer>
             <FooterContainer>
