@@ -21,8 +21,18 @@ const ProductMainLine = ({ }) => {
                     <li>1</li>
                     <li>1</li>
                     <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
                 </UlContainer>
                 <UlContainer>
+                    <li>2</li>
+                    <li>2</li>
+                    <li>2</li>
+                    <li>2</li>
+                    <li>2</li>
                     <li>2</li>
                     <li>2</li>
                     <li>2</li>

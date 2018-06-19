@@ -48,6 +48,7 @@ const PageTemplate = ({ header, visualMain, ProductStack }) => {
                 <MiddleContainer>
                     <ProductMain title="베스트 추천 상품"/>
                     <ProductMainSecond title="추천상품" />
+                    <ProductMainFour title="인기 상품" />
                     <BargainBlock />
                 </MiddleContainer>
                 <RightContainer>

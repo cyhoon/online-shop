@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AuthPage from './pages/AuthPage';
 import CategoryPage from './pages/CategoryPage';
+import ProductPage from './pages/ProductPage';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                 <Route path="/login" component={AuthPage} />
                 <Route path="/register" component={AuthPage} />
                 <Route path="/category" component={CategoryPage} />
+                <Route path="/product" component={ProductPage} />
             </Switch>
         </div>
     );
