@@ -50,7 +50,7 @@ const ProductInfo = () => {
                     <Bold>마일리지: </Bold> <span>250</span>
                 </TextContainer>
                 <TextContainer>
-                    <Bold>주문수량: </Bold><input type="number" />
+                    <Bold>주문수량: </Bold><input type="number" /> 개
                 </TextContainer>
                 <SeparateContainer>
                     <Bold>시중가격: </Bold><span>2500</span>

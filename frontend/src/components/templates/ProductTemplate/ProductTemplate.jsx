@@ -10,6 +10,7 @@ import ProductInfo from '../../organisms/ProductInfo';
 
 import Information from '../../molecules/Information';
 import Pre from '../../atoms/Pre';
+import Board from '../../organisms/Board/Board';
 
 const Container = styled.div`
     width: 100%;
@@ -84,6 +85,7 @@ const ProductTemplate = () => {
                             매월 심사 후 쇼핑몰 메인에 올려드리고 선물을 증정하고 있습니다.
                         </Pre>
                     </Information>
+                    <Board />
                 </MiddleContainer>
             </MainContainer>
             <FooterContainer>
