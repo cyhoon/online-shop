@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = ({
+    display,
     text,
     textColor,
     borderColor,
@@ -18,6 +19,7 @@ const Button = ({
     marginRight,
  }) => {
     const DynamicButton = styled.button`
+        display: ${display};
         background-color: ${backgroundColor? backgroundColor : 'inherit'};
         cursor: pointer;
 
