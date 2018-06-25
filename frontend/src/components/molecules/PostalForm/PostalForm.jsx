@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Input from '../../atoms/Input';
 
-const PostalForm = ({ name, children }) => {
+const PostalForm = ({ value, onChangeHandle, name, children }) => {
     const ChildrenContainer = styled.div`
         display: inline-block;
         margin-left: 20px;    
@@ -11,7 +11,7 @@ const PostalForm = ({ name, children }) => {
     return (
         <div style={{ marginBottom: '10px' }}>
             <span>{ name }</span>
-            <Input />-<Input />
+            <Input value={value} onChangeHandle={onChangeHandle} />-<Input />
             <ChildrenContainer>
                 {children}
             </ChildrenContainer>

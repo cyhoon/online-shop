@@ -48,14 +48,43 @@ export function loginFailure(message) {
     };
 };
 
-export function registerRequest() {
+export function registerRequest(id, pw, name, homeNumber, phoneNumber, mailNumber, address, email) {
+    return (dispatch) => {
+        try {
+            return axios.post(HOST + '/register', {
+                id,
+                pw,
+                name,
+                home_number: homeNumber,
+                phone_number: phoneNumber,
+                mail_number: mailNumber,
+                address,
+                email,
+            }).then((response) => {
+                const { code } = response.data;
 
+                if (code !== 0) { // 실패
+                    dispatch(registerFailure('register error'));
+                } else { // 성공
+                    dispatch(registerSuccess('success'));
+                }
+            });
+        } catch (error) {
+            dispatch(loginFailure('login error'))
+        }
+    };
 };
 
-export function registerSuccess() {
-
+export function registerSuccess(message) {
+    return {
+        type: AUTH_REGISTER_SUCCESS,
+        message,
+    };
 };
 
-export function registerFailure() {
-
+export function registerFailure(message) {
+    return {
+        type: AUTH_REGISTER_FAILURE,
+        message,
+    };
 };
