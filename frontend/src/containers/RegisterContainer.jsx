@@ -32,10 +32,10 @@ class RegisterContainer extends Component {
             this.state.email
         ).then(() => {
             if (this.props.status === 'SUCCESS') {
-                alert('회원가입 성공');
+                alert('회원 가입 성공!');
                 this.props.history.push('/login');
             } else {
-                alert('회원가입 실패');
+                alert('회원 가입 실패!');
             }
         });
     };

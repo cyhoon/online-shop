@@ -15,6 +15,11 @@ const TypeItem = ({ children }) => {
             background-color: #999;
             color: white;
         }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
     `;
 
     return (

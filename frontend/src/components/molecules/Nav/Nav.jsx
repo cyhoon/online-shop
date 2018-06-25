@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavItem from '../../atoms/NavItem';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     text-align: right;
@@ -12,7 +13,7 @@ const Container = styled.div`
 const Nav = () => {
     return (
         <Container>
-            <NavItem>HOME</NavItem>
+            <NavItem><Link to='/'>HOME</Link></NavItem>
             <NavItem>회원정보변경</NavItem>
             <NavItem>고객센터</NavItem>
             <NavItem>장바구니</NavItem>

@@ -26,7 +26,7 @@ const Header = () => {
         <Container>
             <Nav />
             <MiddleContainer>
-                <Logo>영훈 쇼핑몰</Logo>
+                <Logo />
                 <Search />
             </MiddleContainer>
             <Type />

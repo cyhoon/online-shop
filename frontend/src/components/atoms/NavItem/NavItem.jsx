@@ -5,6 +5,11 @@ const NavItem = ({ children }) => {
     const Item = styled.span`
         margin-left: 10px;
         cursor: pointer;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
     `
 
     return (
